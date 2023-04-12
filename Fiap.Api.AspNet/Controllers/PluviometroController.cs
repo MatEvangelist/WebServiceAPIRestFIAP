@@ -1,6 +1,8 @@
 ﻿using Fiap.Api.AspNet.Models;
 using Fiap.Api.AspNet.Repository;
 using Fiap.Api.AspNet.Repository.Context;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -117,7 +119,7 @@ namespace Fiap.Api.AspNet.Controllers
                 return BadRequest(ModelState);
             }
 
-            if (pluviometroModel.RepresentanteId != id)
+            if (pluviometroModel.PluviometroId != id)
             {
                 return NotFound();
             }

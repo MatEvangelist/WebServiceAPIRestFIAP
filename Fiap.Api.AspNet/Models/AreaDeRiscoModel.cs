@@ -31,5 +31,7 @@ namespace Fiap.Api.AspNet.Models
 
         public RioModel? Rio { get; set; }
         public PluviometroModel? Pluviometro { get; set; }
+
+
     }
 }

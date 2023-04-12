@@ -1,6 +1,7 @@
 ﻿using Fiap.Api.AspNet.Models;
 using Fiap.Api.AspNet.Repository;
 using Fiap.Api.AspNet.Repository.Context;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,7 +23,7 @@ namespace Fiap.Api.AspNet.Controllers
         {
             try
             {
-                var lista = AreaDeRiscoRepository.Listar();
+                var lista = areaDeRiscoRepository.Listar();
 
                 if (lista != null)
                 {
@@ -109,14 +110,14 @@ namespace Fiap.Api.AspNet.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult<AreaDeRiscoModel> Put([FromRoute] int id, [FromBody] AreaDeRiscoModel AreaDeRiscoModel)
+        public ActionResult<AreaDeRiscoModel> Put([FromRoute] int id, [FromBody] AreaDeRiscoModel areaDeRiscoModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (AreaDeRiscoModel.AreaDeRiscoId != id)
+            if (areaDeRiscoModel.AreaDeRiscoId != id)
             {
                 return NotFound();
             }
