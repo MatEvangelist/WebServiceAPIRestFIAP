@@ -1,7 +1,7 @@
 ﻿using Fiap.Api.AspNet.Models;
 using Fiap.Api.AspNet.Repository.Context;
 using Microsoft.EntityFrameworkCore;
-using System.Data.Entity.Migrations;
+using System.Linq;
 
 namespace Fiap.Api.AspNet.Repository
 {
@@ -36,7 +36,7 @@ namespace Fiap.Api.AspNet.Repository
 
         public void Update(BoiaModel boia)
         {
-            dataBaseContext.Boia.AddOrUpdate(boia);
+            dataBaseContext.Boia.Update(boia);
             dataBaseContext.SaveChanges();
         }
 

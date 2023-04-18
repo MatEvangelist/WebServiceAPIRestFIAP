@@ -1,7 +1,7 @@
 ﻿using Fiap.Api.AspNet.Models;
 using Fiap.Api.AspNet.Repository.Context;
-using System.Data.Entity.Migrations;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Fiap.Api.AspNet.Repository
 {
@@ -36,7 +36,7 @@ namespace Fiap.Api.AspNet.Repository
 
         public void Update(PluviometroModel pluviometro)
         {
-            dataBaseContext.Pluviometro.AddOrUpdate(pluviometro);
+            dataBaseContext.Pluviometro.Update(pluviometro);
             dataBaseContext.SaveChanges();
         }
 

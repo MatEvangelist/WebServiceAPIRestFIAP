@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
 
 namespace Fiap.Api.AspNet.Models
 {
@@ -22,9 +21,9 @@ namespace Fiap.Api.AspNet.Models
         [ForeignKey("PluviometroModel")]
         public int PluviometroId { get; set; }
 
-        public virtual RioModel RioModel { get; set; }
+        //public virtual RioModel RioModel { get; set; }
 
-        public virtual PluviometroModel PluviometroModel { get; set; }
+        //public virtual PluviometroModel PluviometroModel { get; set; }
 
 
     }

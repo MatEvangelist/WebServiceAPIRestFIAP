@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity;
 using System.Net;
 
 namespace Fiap.Api.AspNet.Models
@@ -21,6 +20,6 @@ namespace Fiap.Api.AspNet.Models
         [ForeignKey("RioModel")]
         public int RioId { get; set; }
 
-        public virtual RioModel RioModel { get; set; }
+        //public virtual RioModel RioModel { get; set; }
     }
 }

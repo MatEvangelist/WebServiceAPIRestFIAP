@@ -6,10 +6,10 @@ namespace Fiap.Api.AspNet.Repository.Context
 {
     public class DataBaseContext : DbContext
     {
-        public DbSet<RioModel> Rio { get; set; }
-        public DbSet<AreaDeRiscoModel> AreaDeRisco { get; set; }
-        public DbSet<BoiaModel> Boia { get; set; }
-        public DbSet<PluviometroModel> Pluviometro { get; set; }
+        public virtual DbSet<RioModel> Rio { get; set; }
+        public virtual DbSet<AreaDeRiscoModel> AreaDeRisco { get; set; }
+        public virtual DbSet<BoiaModel> Boia { get; set; }
+        public virtual DbSet<PluviometroModel> Pluviometro { get; set; }
 
         public DataBaseContext(DbContextOptions options) : base(options)
         {

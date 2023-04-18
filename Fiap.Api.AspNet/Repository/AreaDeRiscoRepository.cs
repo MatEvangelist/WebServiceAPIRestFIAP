@@ -1,6 +1,7 @@
 ﻿using Fiap.Api.AspNet.Models;
 using Fiap.Api.AspNet.Repository.Context;
-using System.Data.Entity.Migrations;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Fiap.Api.AspNet.Repository
 {
@@ -34,7 +35,7 @@ namespace Fiap.Api.AspNet.Repository
 
         public void Update(AreaDeRiscoModel areaDeRisco)
         {
-            dataBaseContext.AreaDeRisco.AddOrUpdate(areaDeRisco);
+            dataBaseContext.AreaDeRisco.Update(areaDeRisco);
             dataBaseContext.SaveChanges();
         }
 
