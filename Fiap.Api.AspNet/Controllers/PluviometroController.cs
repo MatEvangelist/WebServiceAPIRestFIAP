@@ -127,7 +127,7 @@ namespace Fiap.Api.AspNet.Controllers
 
             try
             {
-                pluviometroRepository.Alterar(pluviometroModel);
+                pluviometroRepository.Update(pluviometroModel);
                 return NoContent();
             }
             catch (Exception error)

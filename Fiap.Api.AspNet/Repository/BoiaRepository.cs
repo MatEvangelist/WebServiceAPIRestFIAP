@@ -1,5 +1,7 @@
 ﻿using Fiap.Api.AspNet.Models;
 using Fiap.Api.AspNet.Repository.Context;
+using Microsoft.EntityFrameworkCore;
+using System.Data.Entity.Migrations;
 
 namespace Fiap.Api.AspNet.Repository
 {
@@ -14,10 +16,11 @@ namespace Fiap.Api.AspNet.Repository
 
         public IList<BoiaModel> Listar()
         {
-            var lista = new List<BoiaModel>();
-            lista = dataBaseContext.Boia.ToList<BoiaModel>();
-            return lista;
+            var listaBoiaModel = new List<BoiaModel>();
+            var listaBoia = dataBaseContext.Boia.ToList();
+            return listaBoiaModel;
         }
+
 
         public BoiaModel Consultar(int id)
         {
@@ -31,9 +34,9 @@ namespace Fiap.Api.AspNet.Repository
             dataBaseContext.SaveChanges();
         }
 
-        public void Alterar(BoiaModel boia)
+        public void Update(BoiaModel boia)
         {
-            dataBaseContext.Boia.Update(boia);
+            dataBaseContext.Boia.AddOrUpdate(boia);
             dataBaseContext.SaveChanges();
         }
 

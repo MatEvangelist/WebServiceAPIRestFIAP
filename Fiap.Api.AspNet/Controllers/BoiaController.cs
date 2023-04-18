@@ -4,11 +4,12 @@ using Fiap.Api.AspNet.Repository.Context;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace Fiap.Api.AspNet.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class BoiaController : ControllerBase
     {
         private readonly BoiaRepository boiaRepository;
@@ -19,7 +20,7 @@ namespace Fiap.Api.AspNet.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<BoiaModel>> Get()
+        public ActionResult<IList<BoiaModel>> Get()
         {
             try
             {
@@ -35,9 +36,9 @@ namespace Fiap.Api.AspNet.Controllers
                 }
 
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return StatusCode((int)HttpStatusCode.InternalServerError);
             }
         }
 
@@ -126,7 +127,7 @@ namespace Fiap.Api.AspNet.Controllers
 
             try
             {
-                boiaRepository.Alterar(boiaModel);
+                boiaRepository.Update(boiaModel);
                 return NoContent();
             }
             catch (Exception error)

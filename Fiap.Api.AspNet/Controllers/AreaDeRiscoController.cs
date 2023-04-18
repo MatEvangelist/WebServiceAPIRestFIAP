@@ -125,7 +125,7 @@ namespace Fiap.Api.AspNet.Controllers
 
             try
             {
-                areaDeRiscoRepository.Alterar(areaDeRiscoModel);
+                areaDeRiscoRepository.Update(areaDeRiscoModel);
                 return NoContent();
             }
             catch (Exception error)

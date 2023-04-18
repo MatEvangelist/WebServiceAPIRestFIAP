@@ -1,6 +1,7 @@
 ﻿using Fiap.Api.AspNet.Models;
 using Fiap.Api.AspNet.Repository.Context;
 using Microsoft.EntityFrameworkCore;
+using System.Data.Entity.Migrations;
 using System.Linq;
 
 namespace Fiap.Api.AspNet.Repository
@@ -34,9 +35,9 @@ namespace Fiap.Api.AspNet.Repository
             dataBaseContext.SaveChanges();
         }
 
-        public void Alterar(RioModel rio)
+        public void Update(RioModel rio)
         {
-            dataBaseContext.Rio.Update(rio);
+            dataBaseContext.Rio.AddOrUpdate(rio);
             dataBaseContext.SaveChanges();
         }
 

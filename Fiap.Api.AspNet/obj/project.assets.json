@@ -1614,19 +1614,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MathewsPereiraEvange\\.nuget\\packages\\": {}
+    "C:\\Users\\Eder\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\.NET\\Fiap.Api.AspNet\\Fiap.Api.AspNet\\Fiap.Api.AspNet.csproj",
+      "projectUniqueName": "C:\\Users\\Eder\\Source\\Repos\\WebServiceAPIRestFIAP\\Fiap.Api.AspNet\\Fiap.Api.AspNet.csproj",
       "projectName": "Fiap.Api.AspNet",
-      "projectPath": "C:\\Projetos\\.NET\\Fiap.Api.AspNet\\Fiap.Api.AspNet\\Fiap.Api.AspNet.csproj",
-      "packagesPath": "C:\\Users\\MathewsPereiraEvange\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\.NET\\Fiap.Api.AspNet\\Fiap.Api.AspNet\\obj\\",
+      "projectPath": "C:\\Users\\Eder\\Source\\Repos\\WebServiceAPIRestFIAP\\Fiap.Api.AspNet\\Fiap.Api.AspNet.csproj",
+      "packagesPath": "C:\\Users\\Eder\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eder\\Source\\Repos\\WebServiceAPIRestFIAP\\Fiap.Api.AspNet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\MathewsPereiraEvange\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eder\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

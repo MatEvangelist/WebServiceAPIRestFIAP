@@ -127,7 +127,7 @@ namespace Fiap.Api.AspNet.Controllers
 
             try
             {
-                rioRepository.Alterar(rioModel);
+                rioRepository.Update(rioModel);
                 return NoContent();
             }
             catch (Exception error)
