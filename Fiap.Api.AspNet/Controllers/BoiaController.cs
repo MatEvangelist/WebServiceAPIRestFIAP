@@ -106,6 +106,7 @@ namespace Fiap.Api.AspNet.Controllers
             }
             catch (Exception e)
             {
+
                 return BadRequest();
             }
         }

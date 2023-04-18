@@ -26,7 +26,7 @@ namespace Fiap.Api.AspNet.Models
         public int RioId { get; set; }
 
         //foreign key
-        [Column("T_PLUVIOMETRO_id_pluviometro")]
+        //[Column("T_PLUVIOMETRO_id_pluviometro")]
         public int PluviometroId { get; set; }
 
         public RioModel? Rio { get; set; }

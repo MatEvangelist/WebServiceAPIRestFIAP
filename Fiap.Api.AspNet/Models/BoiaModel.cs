@@ -22,7 +22,7 @@ namespace Fiap.Api.AspNet.Models
         [Column("dt_ultimo_registro")]
         public DateTime DataUltimoRegistro { get; set; }
 
-        [Column("id_rio")]
+        //[Column("id_rio")]
         public int RioId { get; set; }
 
         public RioModel? Rio { get; set; }
