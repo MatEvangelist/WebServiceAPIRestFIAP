@@ -15,10 +15,10 @@ namespace Fiap.Api.AspNet.Repository
         }
 
         public IList<BoiaModel> Listar()
-        {
-            var listaBoiaModel = new List<BoiaModel>();
-            var listaBoia = dataBaseContext.Boia.ToList();
-            return listaBoiaModel;
+        {   
+            var lista = new List<BoiaModel>();
+            lista = dataBaseContext.Boia.ToList<BoiaModel>();
+            return lista;
         }
 
 

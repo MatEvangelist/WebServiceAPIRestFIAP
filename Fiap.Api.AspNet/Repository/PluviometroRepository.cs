@@ -19,6 +19,8 @@ namespace Fiap.Api.AspNet.Repository
         {
             var lista = new List<PluviometroModel>();
             lista = dataBaseContext.Pluviometro.ToList<PluviometroModel>();
+            Console.WriteLine(lista);
+
             return lista;
         }
 
